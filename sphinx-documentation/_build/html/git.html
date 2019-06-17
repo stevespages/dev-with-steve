@@ -52,7 +52,7 @@
 </div>
 <div class="section" id="deploy-at-heroku">
 <h2>Deploy at Heroku<a class="headerlink" href="#deploy-at-heroku" title="Permalink to this headline">¶</a></h2>
-<p>Sign into your Heroku account and create a new app with the name of your app. Do not add to pipeline. Choose GitHub as the deployment method. Connect the GitHub repo. Click on the <cite>Enable Automatic Deploys</cite> button.</p>
+<p>Sign into your Heroku account and create a new app with the name of your app. Do not add to pipeline. Choose GitHub as the deployment method. Connect the GitHub repo. Click on the <cite>Enable Automatic Deploys</cite> button. Select <cite>Settings</cite> and add the config variable <cite>NODE_ENV</cite> with a value of <cite>production</cite>. Add a Procfile to the root of your app with the contents: <code class="docutils literal"><span class="pre">web:</span> <span class="pre">node</span> <span class="pre">bin/www</span></code>. Commit and push to Github.</p>
 </div>
 </div>
 

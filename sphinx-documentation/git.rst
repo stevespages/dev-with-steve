@@ -18,4 +18,4 @@ From now on regularly run ``git add .``, ``git commit -m "description of changes
 Deploy at Heroku
 ----------------
 
-Sign into your Heroku account and create a new app with the name of your app. Do not add to pipeline. Choose GitHub as the deployment method. Connect the GitHub repo. Click on the `Enable Automatic Deploys` button.
+Sign into your Heroku account and create a new app with the name of your app. Do not add to pipeline. Choose GitHub as the deployment method. Connect the GitHub repo. Click on the `Enable Automatic Deploys` button. Select `Settings` and add the config variable `NODE_ENV` with a value of `production`. Add a Procfile to the root of your app with the contents: ``web: node bin/www``. Commit and push to Github.
