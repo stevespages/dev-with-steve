@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Git Github Deploy &#8212; Dev with Steve 0.0.0 documentation</title>
+    <title>Git GitHub Deploy &#8212; Dev with Steve 0.0.0 documentation</title>
     <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <script type="text/javascript">
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="prev" title="Express" href="express.html" />
+    <link rel="prev" title="express.Router" href="express-router.html" />
    
   <link rel="stylesheet" href="_static/custom.css" type="text/css" />
   
@@ -40,7 +40,7 @@
             
   <p><a class="reference internal" href="index.html"><span class="doc">Home</span></a></p>
 <div class="section" id="git-github-deploy">
-<h1>Git Github Deploy<a class="headerlink" href="#git-github-deploy" title="Permalink to this headline">¶</a></h1>
+<h1>Git GitHub Deploy<a class="headerlink" href="#git-github-deploy" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="track-with-git">
 <h2>Track with Git<a class="headerlink" href="#track-with-git" title="Permalink to this headline">¶</a></h2>
 <p>Having created a directory (with or without contents such as an Express app) you can set up git to track any changes in the directory. Create a .gitignore file containing files and directories you do not want to track. For an express app this would include the node_modules directory and any config files that contain sensitive data such as passwords. Now issue the <code class="docutils literal"><span class="pre">git</span> <span class="pre">init</span></code> command from the root directory. Then issue  <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> followed by <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code>.</p>
@@ -52,7 +52,8 @@
 </div>
 <div class="section" id="deploy-at-heroku">
 <h2>Deploy at Heroku<a class="headerlink" href="#deploy-at-heroku" title="Permalink to this headline">¶</a></h2>
-<p>Sign into your Heroku account and create a new app with the name of your app. Do not add to pipeline. Choose GitHub as the deployment method. Connect the GitHub repo. Click on the <cite>Enable Automatic Deploys</cite> button. Select <cite>Settings</cite> and add the config variable <cite>NODE_ENV</cite> with a value of <cite>production</cite>. Add a Procfile to the root of your app with the contents: <code class="docutils literal"><span class="pre">web:</span> <span class="pre">node</span> <span class="pre">bin/www</span></code>. Commit and push to Github.</p>
+<p>Sign into your Heroku account and create a new app with the name of your app. Do not add to pipeline. Choose GitHub as the deployment method. Connect the GitHub repo. Click on the <cite>Enable Automatic Deploys</cite> button. Select <cite>Settings</cite> and add the config variable <cite>NODE_ENV</cite> with a value of <cite>production</cite>. Add a Procfile to the root of your app with the contents with the command for starting your app: <code class="docutils literal"><span class="pre">web:</span> <span class="pre">node</span> <span class="pre">bin/www</span></code>. The command for an ordinary Express App (as opposed to an Express Application Generator app) would be <code class="docutils literal"><span class="pre">web:</span> <span class="pre">node</span> <span class="pre">app.js</span></code>. Commit and push to Github. Access the app at <a class="reference external" href="http://name-of-app.herokuapp.com">http://name-of-app.herokuapp.com</a>.</p>
+<p>From now on when you push changes to your app to GitHub they will be incorporated into the app hosted at Heroku.</p>
 </div>
 </div>
 
@@ -67,7 +68,7 @@
   <li><a href="index.html">Documentation overview</a><ul>
   <li><a href="contents.html">Contents</a><ul>
   <li><a href="express.html">Express</a><ul>
-      <li>Previous: <a href="express.html" title="previous chapter">Express</a></li>
+      <li>Previous: <a href="express-router.html" title="previous chapter">express.Router</a></li>
   </ul></li>
   </ul></li>
   </ul></li>

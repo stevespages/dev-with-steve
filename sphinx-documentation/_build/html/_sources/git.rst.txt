@@ -1,6 +1,6 @@
 :doc:`Home </index>`
 
-Git Github Deploy
+Git GitHub Deploy
 =================
 
 Track with Git
@@ -18,4 +18,6 @@ From now on regularly run ``git add .``, ``git commit -m "description of changes
 Deploy at Heroku
 ----------------
 
-Sign into your Heroku account and create a new app with the name of your app. Do not add to pipeline. Choose GitHub as the deployment method. Connect the GitHub repo. Click on the `Enable Automatic Deploys` button. Select `Settings` and add the config variable `NODE_ENV` with a value of `production`. Add a Procfile to the root of your app with the contents: ``web: node bin/www``. Commit and push to Github.
+Sign into your Heroku account and create a new app with the name of your app. Do not add to pipeline. Choose GitHub as the deployment method. Connect the GitHub repo. Click on the `Enable Automatic Deploys` button. Select `Settings` and add the config variable `NODE_ENV` with a value of `production`. Add a Procfile to the root of your app with the contents with the command for starting your app: ``web: node bin/www``. The command for an ordinary Express App (as opposed to an Express Application Generator app) would be ``web: node app.js``. Commit and push to Github. Access the app at http://name-of-app.herokuapp.com.
+
+From now on when you push changes to your app to GitHub they will be incorporated into the app hosted at Heroku.

@@ -6,4 +6,5 @@ Express
 .. toctree::
    :maxdepth: 2
 
+   express-router
    git
