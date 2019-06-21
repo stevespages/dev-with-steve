@@ -1,0 +1,9 @@
+:doc:`Home </index>` | :doc:`Express <./index>` 
+
+javascript and jquery
+=====================
+
+We can incorporate javascript and jquery into the front end using the html script tag. Javascript can be written in .js file inside the /public/javascripts directory (Express Application Generator creates this directory). The src attribute value of the script tag gives the location of the javascript. For basic javascript it may only be necessary to include the javascript file. However, in some cases libraries may additionally be needed. Typically with jquery a script tag is needed to get the jquery library and then another script tag is used to get the jquery script.
+
+Code Example: :doc:`javascript-and-jquery \
+<./code-examples/javascript-and-jquery-0>`

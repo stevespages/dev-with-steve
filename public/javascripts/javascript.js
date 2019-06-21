@@ -1,4 +1,6 @@
-// javascript code for javascript-and-jquery Code Example
+// public/javascripts/javascript.js
+
+// // javascript code for javascript-and-jquery Code Example
 function myFunction() {
 	document.getElementById("demo").innerHTML = "Paragraph changed";
 }

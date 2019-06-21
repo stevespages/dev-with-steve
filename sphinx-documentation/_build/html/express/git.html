@@ -1,0 +1,107 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Git GitHub Deploy &#8212; Dev with Steve 0.0.0 documentation</title>
+    <link rel="stylesheet" href="../_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '0.0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="javascript and jquery" href="javascript-and-jquery.html" />
+    <link rel="prev" title="express.Router" href="express-router.html" />
+   
+  <link rel="stylesheet" href="../_static/custom.css" type="text/css" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <p><a class="reference internal" href="../index.html"><span class="doc">Home</span></a> | <a class="reference internal" href="index.html"><span class="doc">Express</span></a></p>
+<div class="section" id="git-github-deploy">
+<h1>Git GitHub Deploy<a class="headerlink" href="#git-github-deploy" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="track-with-git">
+<h2>Track with Git<a class="headerlink" href="#track-with-git" title="Permalink to this headline">¶</a></h2>
+<p>Having created a directory (with or without contents such as an Express app) you can set up git to track any changes in the directory. Create a .gitignore file containing files and directories you do not want to track. For an express app this would include the node_modules directory and any config files that contain sensitive data such as passwords. Now issue the <code class="docutils literal"><span class="pre">git</span> <span class="pre">init</span></code> command from the root directory. Then issue  <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code> followed by <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span></code>.</p>
+</div>
+<div class="section" id="connect-to-github">
+<h2>Connect to Github<a class="headerlink" href="#connect-to-github" title="Permalink to this headline">¶</a></h2>
+<p>Create a new repo in <cite>Github</cite> with the same name as the root directory of your local git repo. This is the name of the app you have created. After creating a repo on Github you are presented with several options. The one of interest here is labelled <cite>…or push an existing repository from the command line</cite>. Copy the first command and issue it from the root of your local repo and then do the same with the second line. These two lines are <code class="docutils literal"><span class="pre">git</span> <span class="pre">remote</span> <span class="pre">add</span> <span class="pre">origin</span> <span class="pre">https://github.com/stevespages/dev-with-steve.git</span></code> and <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span> <span class="pre">-u</span> <span class="pre">origin</span> <span class="pre">master</span></code>.</p>
+<p>From now on regularly run <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">.</span></code>, <code class="docutils literal"><span class="pre">git</span> <span class="pre">commit</span> <span class="pre">-m</span> <span class="pre">&quot;description</span> <span class="pre">of</span> <span class="pre">changes</span> <span class="pre">since</span> <span class="pre">last</span> <span class="pre">commit&quot;</span></code> and <code class="docutils literal"><span class="pre">git</span> <span class="pre">push</span></code>.</p>
+</div>
+<div class="section" id="deploy-at-heroku">
+<h2>Deploy at Heroku<a class="headerlink" href="#deploy-at-heroku" title="Permalink to this headline">¶</a></h2>
+<p>Sign into your Heroku account and create a new app with the name of your app. Do not add to pipeline. Choose GitHub as the deployment method. Connect the GitHub repo. Click on the <cite>Enable Automatic Deploys</cite> button. Select <cite>Settings</cite> and add the config variable <cite>NODE_ENV</cite> with a value of <cite>production</cite>. Add a Procfile to the root of your app with the contents with the command for starting your app: <code class="docutils literal"><span class="pre">web:</span> <span class="pre">node</span> <span class="pre">bin/www</span></code>. The command for an ordinary Express App (as opposed to an Express Application Generator app) would be <code class="docutils literal"><span class="pre">web:</span> <span class="pre">node</span> <span class="pre">app.js</span></code>. Commit and push to Github. Access the app at <a class="reference external" href="http://name-of-app.herokuapp.com">http://name-of-app.herokuapp.com</a>.</p>
+<p>From now on when you push changes to your app to GitHub they will be incorporated into the app hosted at Heroku.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="../index.html">Documentation overview</a><ul>
+  <li><a href="index.html">Express</a><ul>
+      <li>Previous: <a href="express-router.html" title="previous chapter">express.Router</a></li>
+      <li>Next: <a href="javascript-and-jquery.html" title="next chapter">javascript and jquery</a></li>
+  </ul></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2019, Steve Greig.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.7</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.8</a>
+      
+      |
+      <a href="../_sources/express/git.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

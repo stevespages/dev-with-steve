@@ -8,3 +8,4 @@ Express
 
    express-router
    git
+   javascript-and-jquery

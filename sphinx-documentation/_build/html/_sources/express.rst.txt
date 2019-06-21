@@ -7,4 +7,5 @@ Express
    :maxdepth: 2
 
    express-router
-   git
+   express/git
+   javascript-and-jquery
